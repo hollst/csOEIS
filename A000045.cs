@@ -1,4 +1,4 @@
-﻿using static System.Console;
+using static System.Console;
 
 namespace csOEIS.csOEIS_Classes
 {
@@ -19,13 +19,4 @@ namespace csOEIS.csOEIS_Classes
                 Sequence[i] = Sequence[i - 1] + Sequence[i - 2];
         }
     }
-
-    //public static class Static_Methods
-    //{
-    //    public static void EndMessageLine(this string s)
-    //    {
-    //        WriteLine(s);
-    //        ReadKey(true);
-    //    }
-    //}
 }
