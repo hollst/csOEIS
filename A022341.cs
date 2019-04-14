@@ -6,6 +6,7 @@ namespace csOEIS.csOEIS_Classes
     public class A022441
     {
         static string NL = Environment.NewLine;
+        
         public string Caption =
             "Odd Fibbinary numbers; also 4 * Fibbinary(n) + 1. " + NL +
             
