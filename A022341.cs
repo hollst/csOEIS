@@ -25,23 +25,24 @@ namespace csOEIS.csOEIS_Classes
                 int k = this.N;
                 List<int> lk = new List<int>();
                 int last_rest = 0, rest = 0;
-                bool bo_double_1 = false;
+                bool bo_double_one = false;
                 while (k > 0)
                 {
                     rest = k % 2;
                     if (last_rest * rest == 1)
                     {
-                        bo_double_1 = true;
+                        bo_double_one = true;
                         break;
                     }
                     lk.Add(rest);
                     k /= 2;
                     last_rest = rest;
                 }
-                if (!bo_double_1)
+                if (!bo_double_one)
                     result.Add(this.N);
                 this.N += 2;
             }
+            
             this.Sequence = new decimal[result.Count];
             result.ToArray().CopyTo(this.Sequence, 0);
         }
