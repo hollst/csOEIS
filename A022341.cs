@@ -14,14 +14,15 @@ namespace csOEIS.csOEIS_Classes
             "Odd Fibbinary numbers starts with a one and ends with a one";
         
         public decimal[] Sequence;
-        public int Nstart, Nmax;
+        public int Nstart, N, Nmax; //you can check N for having reached Nmax
         public A022441(int Nstart = 0, int Nmax = 256)
         {
+            this.Nstart = Nstart; this.Nmax = Nmax; this.N = 1;
             List<decimal> result = new List<decimal>();
-            int i = 1;
+
             while (result.Count < Nmax)
             {
-                int k = i;
+                int k = this.N;
                 List<int> lk = new List<int>();
                 int last_rest = 0, rest = 0;
                 bool bo_double_1 = false;
@@ -38,8 +39,8 @@ namespace csOEIS.csOEIS_Classes
                     last_rest = rest;
                 }
                 if (!bo_double_1)
-                    result.Add(i);
-                i += 2;
+                    result.Add(this.N);
+                this.N += 2;
             }
             this.Sequence = new decimal[result.Count];
             result.ToArray().CopyTo(this.Sequence, 0);
