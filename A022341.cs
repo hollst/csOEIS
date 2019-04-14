@@ -14,7 +14,7 @@ namespace csOEIS.csOEIS_Classes
             "Odd Fibbinary numbers starts with a one and ends with a one";
         
         public decimal[] Sequence;
-        public int Nstart, N, Nmax; //you can check N for having reached Nmax
+        public int Nstart, N, Nmax; //maybe for checking N to have reached Nmax
         public A022441(int Nstart = 0, int Nmax = 256)
         {
             this.Nstart = Nstart; this.Nmax = Nmax; this.N = 1;
