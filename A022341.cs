@@ -5,10 +5,11 @@ namespace csOEIS.csOEIS_Classes
 {
     public class A022441
     {
+        static string NL = Environment.NewLine;
         public string Caption =
-            "Odd Fibbinary numbers; also 4 * Fibbinary(n) + 1. " + Environment.NewLine +
+            "Odd Fibbinary numbers; also 4 * Fibbinary(n) + 1. " + NL +
             
-            "Fibbinary numbers are positive integers whose binary representation contains no consecutive ones" + Environment.NewLine +
+            "Fibbinary numbers are positive integers whose binary representation contains no consecutive ones" + NL +
             "Odd Fibbinary numbers starts with a one and ends with a one";
         
         public decimal[] Sequence;
