@@ -1,4 +1,6 @@
-﻿using csOEIS.csOEIS_Classes;
+using static System.Console;
+
+using csOEIS.csOEIS_Classes;
 
 namespace csOEIS
 {
