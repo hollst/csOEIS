@@ -8,7 +8,7 @@ namespace csOEIS.csOEIS_Classes
         static string NL = Environment.NewLine;
         
         public string Caption =
-            "Odd Fibbinary numbers; also 4 * Fibbinary(n) + 1. " + NL +
+            "Odd Fibbinary numbers; also 4 * Fibbinary(n) + 1." + NL +
             
             "Fibbinary numbers are positive integers whose binary representation contains no consecutive ones" + NL +
             "Odd Fibbinary numbers starts with a one and ends with a one";
