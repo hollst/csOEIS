@@ -5,7 +5,7 @@ namespace csOEIS.csOEIS_Classes
 {
     public class A022441
     {
-        static string NL = Environment.NewLine;
+        static readonly string NL = Environment.NewLine;
         
         public string Caption =
             "Odd Fibbinary numbers; also 4 * Fibbinary(n) + 1." + NL +
@@ -24,11 +24,11 @@ namespace csOEIS.csOEIS_Classes
             {
                 int k = this.N;
                 List<int> lk = new List<int>();
-                int last_rest = 0, rest = 0;
+                int last_rest = 0;
                 bool bo_double_one = false;
                 while (k > 0)
                 {
-                    rest = k % 2;
+                    int rest = k % 2;
                     if (last_rest * rest == 1)
                     {
                         bo_double_one = true;
