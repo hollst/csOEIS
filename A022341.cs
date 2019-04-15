@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace csOEIS.csOEIS_Classes
 {
-    public class A022441
+    public class A022341
     {
         static readonly string NL = Environment.NewLine;
         
