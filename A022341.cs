@@ -13,37 +13,27 @@ namespace csOEIS.csOEIS_Classes
             "Fibbinary numbers are positive integers whose binary representation contains no consecutive ones." + NL +
             "Odd Fibbinary numbers starts with an one and ends with an one (little-endian).";
         
-        public decimal[] Sequence;
+        public int[] Sequence;
+        public Dictionary<int, int> Dict = new Dictionary<int, int>();//for later applications
         public int Nstart, N, Nmax; //maybe for checking N to have reached Nmax
+        
         public A022441(int Nstart = 0, int Nmax = 256)
         {
             this.Nstart = Nstart; this.Nmax = Nmax; this.N = 1;
-            List<decimal> result = new List<decimal>();
-
+            List<int> result = new List<int>();
+            int counter = 0;
             while (result.Count < Nmax)
             {
-                int k = this.N;
-                List<int> lk = new List<int>();
-                int last_rest = 0;
-                bool bo_double_one = false;
-                while (k > 0)
+                
+                int K = this.N >> 1;
+                if ((int)(K & this.N) == 0)
                 {
-                    int rest = k % 2;
-                    if (last_rest * rest == 1)
-                    {
-                        bo_double_one = true;
-                        break;
-                    }
-                    lk.Add(rest);
-                    k /= 2;
-                    last_rest = rest;
-                }
-                if (!bo_double_one)
                     result.Add(this.N);
+                    this.Dict.Add(this.N, counter++);
+                }
                 this.N += 2;
             }
-            
-            this.Sequence = new decimal[result.Count];
+            this.Sequence = new int[result.Count];
             result.ToArray().CopyTo(this.Sequence, 0);
         }
     }
